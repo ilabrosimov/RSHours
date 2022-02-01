@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct CheckRSHoursApp: App {
+    @StateObject var lessons = Lessons()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(lessons)
         }
     }
 }
